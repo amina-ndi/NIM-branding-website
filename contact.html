@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NIM School Management Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 62px;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .contact-hero h1 span {
+            background: linear-gradient(135deg, #818cf8, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-hero p {
+            font-size: 20px;
+            color: #94a3b8;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            margin-top: -60px;
+            background: white;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: #eef2ff;
+            color: #4f46e5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-content h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .info-content p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #4f46e5;
+        }
+
+        @media (max-width: 991px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-grid {
+                padding: 32px 20px;
+            }
+
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+        }
+    </style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="graduation-cap" class="logo-icon"></i>
+                <span class="logo-text">NIM</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="trusted.html">Trusted By</a></li>
+                <li><a href="usecases.html">Who Uses NIM</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="screens.html">Preview</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <span class="badge"
+                style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 28px; backdrop-filter: blur(8px);">
+                <i data-lucide="mail"></i>&nbsp; Contact Us
+            </span>
+            <h1>Get in <span>Touch</span></h1>
+            <p>Have questions? We're here to help you transform your school.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon"><i data-lucide="mail"></i></div>
+                    <div class="info-content">
+                        <h3>Email Us</h3>
+                        <p>support@nim.school</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i data-lucide="phone"></i></div>
+                    <div class="info-content">
+                        <h3>Call Us</h3>
+                        <p>+92 300 1234567</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                    <div class="info-content">
+                        <h3>Visit Office</h3>
+                        <p>Gulberg III, Lahore, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" placeholder="John">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Doe">
+                </div>
+                <div class="form-group full">
+                    <label>Work Email</label>
+                    <input type="email" placeholder="john@school.com">
+                </div>
+                <div class="form-group full">
+                    <label>Message</label>
+                    <textarea rows="4" placeholder="How can we help?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 100px;">
+        <div class="container">
+            <div class="footer-top grid md-4">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i data-lucide="graduation-cap" class="logo-icon"></i>
+                        <span class="logo-text">NIM</span>
+                    </a>
+                    <p>NIM is a leading school management solution providing modern tools for modern education
+                        institutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

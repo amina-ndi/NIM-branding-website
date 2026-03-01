@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Modules | NIM School Management Software</title>
+    <meta name="description"
+        content="Explore NIM's powerful school management modules — Student Information, Academics, Exams, Attendance, Finance, and Analytics all in one platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modules.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="graduation-cap" class="logo-icon"></i>
+                <span class="logo-text">NIM</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="modules.html" class="active-nav">Modules</a></li>
+                <li><a href="trusted.html">Trusted By</a></li>
+                <li><a href="usecases.html">Who Uses NIM</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="screens.html">Preview</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== PAGE HERO ====== -->
+    <section class="modules-hero">
+        <div class="modules-hero-bg">
+            <div class="mh-blob mh-blob-1"></div>
+            <div class="mh-blob mh-blob-2"></div>
+            <div class="mh-blob mh-blob-3"></div>
+        </div>
+        <div class="container">
+            <span class="badge">
+                <i data-lucide="layers"></i>&nbsp; All-in-One Platform
+            </span>
+            <h1>Powerful <span>Modules</span> to Manage<br>Every School Activity</h1>
+            <p>From student admissions to financial reports — NIM covers every aspect of school administration in one
+                unified, easy-to-use platform.</p>
+            <div class="modules-hero-actions">
+                <a href="signup.html" class="btn btn-primary btn-lg">Get Started Free</a>
+                <a href="#core-modules" class="btn btn-secondary btn-lg">
+                    <i data-lucide="arrow-down"></i> Explore Modules
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SECTION 1: CORE MODULES ====== -->
+    <section id="core-modules" class="core-modules-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Core Modules</span>
+                <h2>Powerful Modules to Manage <span>Every School Activity</span></h2>
+                <p>Six comprehensive modules that cover the complete school management lifecycle — built for efficiency
+                    and simplicity.</p>
+            </div>
+
+            <div class="modules-grid">
+
+                <!-- Module 1: Student Information -->
+                <div class="module-card" id="mod-sis">
+                    <div class="module-card-header blue-grad">
+                        <div class="module-icon-big">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="module-number">01</div>
+                    </div>
+                    <div class="module-card-body">
+                        <h3>Student Information System</h3>
+                        <p class="module-tagline">Manage complete student lifecycle</p>
+                        <ul class="module-features">
+                            <li><i data-lucide="check-circle"></i> Admissions &amp; profiles</li>
+                            <li><i data-lucide="check-circle"></i> Parent records</li>
+                            <li><i data-lucide="check-circle"></i> Academic history</li>
+                            <li><i data-lucide="check-circle"></i> Class allocation</li>
+                        </ul>
+                        <a href="screens.html" class="module-link">Explore Module <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Module 2: Academic & Class Management -->
+                <div class="module-card" id="mod-academic">
+                    <div class="module-card-header cyan-grad">
+                        <div class="module-icon-big">
+                            <i data-lucide="school"></i>
+                        </div>
+                        <div class="module-number">02</div>
+                    </div>
+                    <div class="module-card-body">
+                        <h3>Academic &amp; Class Management</h3>
+                        <p class="module-tagline">Organize academic structure</p>
+                        <ul class="module-features">
+                            <li><i data-lucide="check-circle"></i> Classes &amp; sections</li>
+                            <li><i data-lucide="check-circle"></i> Subjects &amp; curriculum</li>
+                            <li><i data-lucide="check-circle"></i> Teacher assignment</li>
+                            <li><i data-lucide="check-circle"></i> Timetables</li>
+                        </ul>
+                        <a href="#" class="module-link">Explore Module <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Module 3: Examination & Results -->
+                <div class="module-card" id="mod-exam">
+                    <div class="module-card-header purple-grad">
+                        <div class="module-icon-big">
+                            <i data-lucide="clipboard-list"></i>
+                        </div>
+                        <div class="module-number">03</div>
+                    </div>
+                    <div class="module-card-body">
+                        <h3>Examination &amp; Results</h3>
+                        <p class="module-tagline">Smart exam control</p>
+                        <ul class="module-features">
+                            <li><i data-lucide="check-circle"></i> Exam planning</li>
+                            <li><i data-lucide="check-circle"></i> Marks entry</li>
+                            <li><i data-lucide="check-circle"></i> Auto result generation</li>
+                            <li><i data-lucide="check-circle"></i> Report cards</li>
+                        </ul>
+                        <a href="#" class="module-link">Explore Module <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Module 4: Attendance System -->
+                <div class="module-card" id="mod-attendance">
+                    <div class="module-card-header teal-grad">
+                        <div class="module-icon-big">
+                            <i data-lucide="calendar-check"></i>
+                        </div>
+                        <div class="module-number">04</div>
+                    </div>
+                    <div class="module-card-body">
+                        <h3>Attendance System</h3>
+                        <p class="module-tagline">Accurate attendance tracking</p>
+                        <ul class="module-features">
+                            <li><i data-lucide="check-circle"></i> Daily attendance</li>
+                            <li><i data-lucide="check-circle"></i> Staff attendance</li>
+                            <li><i data-lucide="check-circle"></i> Absence alerts</li>
+                            <li><i data-lucide="check-circle"></i> Reports</li>
+                        </ul>
+                        <a href="#" class="module-link">Explore Module <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Module 5: Finance & Fees -->
+                <div class="module-card" id="mod-finance">
+                    <div class="module-card-header amber-grad">
+                        <div class="module-icon-big">
+                            <i data-lucide="credit-card"></i>
+                        </div>
+                        <div class="module-number">05</div>
+                    </div>
+                    <div class="module-card-body">
+                        <h3>Finance &amp; Fees</h3>
+                        <p class="module-tagline">Complete financial management</p>
+                        <ul class="module-features">
+                            <li><i data-lucide="check-circle"></i> Fee structures</li>
+                            <li><i data-lucide="check-circle"></i> Fee collection</li>
+                            <li><i data-lucide="check-circle"></i> Expense tracking</li>
+                            <li><i data-lucide="check-circle"></i> Financial reports</li>
+                        </ul>
+                        <a href="#" class="module-link">Explore Module <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Module 6: Reports & Analytics -->
+                <div class="module-card" id="mod-reports">
+                    <div class="module-card-header pink-grad">
+                        <div class="module-icon-big">
+                            <i data-lucide="bar-chart-2"></i>
+                        </div>
+                        <div class="module-number">06</div>
+                    </div>
+                    <div class="module-card-body">
+                        <h3>Reports &amp; Analytics</h3>
+                        <p class="module-tagline">Insightful decision making</p>
+                        <ul class="module-features">
+                            <li><i data-lucide="check-circle"></i> Performance reports</li>
+                            <li><i data-lucide="check-circle"></i> Attendance analysis</li>
+                            <li><i data-lucide="check-circle"></i> Financial summaries</li>
+                            <li><i data-lucide="check-circle"></i> Institutional statistics</li>
+                        </ul>
+                        <a href="#" class="module-link">Explore Module <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SECTION 2: HOW NIM WORKS ====== -->
+    <section id="how-it-works" class="how-section">
+        <div class="how-section-bg"></div>
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-eyebrow light-eyebrow">Step by Step</span>
+                <h2>How <span class="white-span">NIM Works</span></h2>
+                <p>Get your school fully digital in 5 simple steps. No technical expertise required.</p>
+            </div>
+
+            <div class="steps-timeline">
+
+                <div class="step-item">
+                    <div class="step-connector-left"></div>
+                    <div class="step-bubble blue-bubble">
+                        <i data-lucide="user-plus"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number-badge">Step 01</div>
+                        <h3>Add Students &amp; Classes</h3>
+                        <p>Start by setting up your school profile, adding classes, sections, and onboarding students
+                            with complete profiles and parent information.</p>
+                    </div>
+                    <div class="step-connector-right"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-connector-left"></div>
+                    <div class="step-bubble cyan-bubble">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number-badge">Step 02</div>
+                        <h3>Manage Academics &amp; Attendance</h3>
+                        <p>Assign subjects, teachers, and timetables. Track daily student and staff attendance with
+                            automatic absence alerts for parents.</p>
+                    </div>
+                    <div class="step-connector-right"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-connector-left"></div>
+                    <div class="step-bubble purple-bubble">
+                        <i data-lucide="clipboard-check"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number-badge">Step 03</div>
+                        <h3>Conduct Exams &amp; Generate Results</h3>
+                        <p>Plan exams, enter marks, and let NIM automatically calculate results and generate
+                            professional report cards for every student.</p>
+                    </div>
+                    <div class="step-connector-right"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-connector-left"></div>
+                    <div class="step-bubble amber-bubble">
+                        <i data-lucide="banknote"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number-badge">Step 04</div>
+                        <h3>Collect Fees &amp; Track Finance</h3>
+                        <p>Set fee structures, collect payments, issue receipts, track expenses, and manage your
+                            institution's complete financial health in real-time.</p>
+                    </div>
+                    <div class="step-connector-right"></div>
+                </div>
+
+                <div class="step-item last-step">
+                    <div class="step-connector-left"></div>
+                    <div class="step-bubble green-bubble">
+                        <i data-lucide="pie-chart"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number-badge">Step 05</div>
+                        <h3>View Reports &amp; Insights</h3>
+                        <p>Access powerful dashboards with student performance, attendance trends, financial summaries,
+                            and institutional statistics — anytime, anywhere.</p>
+                    </div>
+                    <div class="step-connector-right"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SECTION 3: BENEFITS ====== -->
+    <section id="benefits" class="benefits-section">
+        <div class="container">
+            <div class="benefits-layout">
+
+                <!-- Left: Heading + CTA -->
+                <div class="benefits-left">
+                    <span class="section-eyebrow">Why Choose NIM</span>
+                    <h2>Why Schools <span>Choose NIM</span> Over Everything Else</h2>
+                    <p>NIM isn't just software — it's a complete school management ecosystem designed specifically
+                        for the needs of modern Pakistani educational institutions.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Start Free Today</a>
+                    <div class="benefits-mini-stats">
+                        <div class="mini-stat">
+                            <strong>50+</strong>
+                            <span>Schools</span>
+                        </div>
+                        <div class="mini-stat">
+                            <strong>1000+</strong>
+                            <span>Students</span>
+                        </div>
+                        <div class="mini-stat">
+                            <strong>99%</strong>
+                            <span>Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Benefits List -->
+                <div class="benefits-right">
+                    <div class="benefit-item">
+                        <div class="benefit-icon blue">
+                            <i data-lucide="layout-dashboard"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>All-in-One School ERP</h4>
+                            <p>Every module you need — admissions, exams, attendance, finance — all under one roof.
+                                No switching between multiple apps.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon cyan">
+                            <i data-lucide="mouse-pointer-2"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Easy &amp; User-Friendly Interface</h4>
+                            <p>Designed for non-technical staff. If you can use a smartphone, you can use NIM —
+                                no training required.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon purple">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Saves Administrative Time</h4>
+                            <p>Automate repetitive tasks like fee reminders, result calculations, and attendance
+                                reports. Save 10+ hours per week.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon teal">
+                            <i data-lucide="file-x"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Reduces Paperwork by 90%</h4>
+                            <p>Go fully digital — no more manual registers, paper forms, or physical fee books.
+                                Everything is stored securely in the cloud.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon green">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Secure Centralized Data</h4>
+                            <p>All data is encrypted, backed up daily, and accessible only by authorized staff.
+                                Never lose a record again.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon pink">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Scalable for Any Institution</h4>
+                            <p>Whether you have 100 or 10,000 students, NIM scales seamlessly with your institution
+                                — from single-campus to multi-branch schools.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== BOTTOM CTA ====== -->
+    <section class="modules-cta-band">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <div class="modules-cta-inner">
+                <h2>Ready to Modernize Your School?</h2>
+                <p>Join 50+ institutes already using NIM to run smarter, faster, and better.</p>
+                <div class="modules-cta-actions">
+                    <a href="#" class="btn btn-white btn-lg">Get Started Free</a>
+                    <a href="trusted.html" class="btn btn-outline-white btn-lg">See Who Trusts NIM</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top grid md-4">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i data-lucide="graduation-cap" class="logo-icon"></i>
+                        <span class="logo-text">NIM</span>
+                    </a>
+                    <p>NIM is a leading school management solution providing modern tools for modern education
+                        institutions in Pakistan.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="modules.html">Modules</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="screens.html">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#privacy">Privacy Policy</a></li>
+                        <li><a href="index.html#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for educational insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i data-lucide="arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NIM School Management Software. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Scroll reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.module-card, .step-item, .benefit-item').forEach(el => {
+            el.classList.add('reveal-anim');
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

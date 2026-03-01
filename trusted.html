@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trusted by Schools | NIM School Management Software</title>
+    <meta name="description"
+        content="NIM is trusted by 50+ institutes and manages 1000+ students. See how schools across Pakistan trust NIM for accuracy, speed, and reliability.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="trusted.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="graduation-cap" class="logo-icon"></i>
+                <span class="logo-text">NIM</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="trusted.html" class="active-nav">Trusted By</a></li>
+                <li><a href="usecases.html">Who Uses NIM</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="screens.html">Preview</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== PAGE HERO HEADER ====== -->
+    <section class="trust-page-hero">
+        <div class="trust-hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <span class="badge">
+                <i data-lucide="shield-check"></i>&nbsp; Verified &amp; Trusted Platform
+            </span>
+            <h1>Trusted by <span>Modern Schools</span><br>Across Pakistan</h1>
+            <p>NIM empowers educational institutions to manage daily operations with <strong>accuracy</strong>,
+                <strong>speed</strong>, and <strong>total confidence</strong> — every single day.
+            </p>
+        </div>
+    </section>
+
+    <!-- ====== ANIMATED STATS BAND ====== -->
+    <section class="trust-stats-band">
+        <div class="container">
+            <div class="trust-stats-grid">
+
+                <div class="trust-stat-card">
+                    <div class="trust-stat-icon blue">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="trust-stat-number" data-target="1000" data-suffix="+">0</div>
+                    <div class="trust-stat-label">Students Managed</div>
+                    <div class="trust-stat-desc">Active student profiles across all institutes</div>
+                </div>
+
+                <div class="trust-stat-card">
+                    <div class="trust-stat-icon cyan">
+                        <i data-lucide="building-2"></i>
+                    </div>
+                    <div class="trust-stat-number" data-target="50" data-suffix="+">0</div>
+                    <div class="trust-stat-label">Institutes Onboarded</div>
+                    <div class="trust-stat-desc">Schools, colleges &amp; academies using NIM</div>
+                </div>
+
+                <div class="trust-stat-card">
+                    <div class="trust-stat-icon purple">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <div class="trust-stat-number" data-target="10000" data-suffix="+">0</div>
+                    <div class="trust-stat-label">Records Managed</div>
+                    <div class="trust-stat-desc">Securely stored student &amp; staff records</div>
+                </div>
+
+                <div class="trust-stat-card">
+                    <div class="trust-stat-icon green">
+                        <i data-lucide="bar-chart-2"></i>
+                    </div>
+                    <div class="trust-stat-number" data-target="99" data-suffix="%">0</div>
+                    <div class="trust-stat-label">Data Accuracy</div>
+                    <div class="trust-stat-desc">Verified precision across all reports</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SCROLLING LOGO STRIP ====== -->
+    <section class="trust-logos-section">
+        <div class="container">
+            <p class="trust-logos-title">Powering institutions across Pakistan &amp; beyond</p>
+        </div>
+        <div class="trust-logos-track">
+            <div class="trust-logos-inner">
+                <div class="school-pill"><i data-lucide="graduation-cap"></i> Al-Noor Academy</div>
+                <div class="school-pill"><i data-lucide="school"></i> Bright Future School</div>
+                <div class="school-pill"><i data-lucide="book-open"></i> Crescent High School</div>
+                <div class="school-pill"><i data-lucide="landmark"></i> Faisal Model Institute</div>
+                <div class="school-pill"><i data-lucide="award"></i> Green Valley School</div>
+                <div class="school-pill"><i data-lucide="star"></i> Horizon Academy</div>
+                <div class="school-pill"><i data-lucide="graduation-cap"></i> Iqra Public School</div>
+                <div class="school-pill"><i data-lucide="school"></i> Jinnah Model School</div>
+                <div class="school-pill"><i data-lucide="book-open"></i> Knowledge Hub</div>
+                <div class="school-pill"><i data-lucide="landmark"></i> Liberty Grammar School</div>
+                <div class="school-pill"><i data-lucide="star"></i> Mehran Academy</div>
+                <div class="school-pill"><i data-lucide="award"></i> National Model School</div>
+                <!-- Duplicate for seamless infinite scroll -->
+                <div class="school-pill"><i data-lucide="graduation-cap"></i> Al-Noor Academy</div>
+                <div class="school-pill"><i data-lucide="school"></i> Bright Future School</div>
+                <div class="school-pill"><i data-lucide="book-open"></i> Crescent High School</div>
+                <div class="school-pill"><i data-lucide="landmark"></i> Faisal Model Institute</div>
+                <div class="school-pill"><i data-lucide="award"></i> Green Valley School</div>
+                <div class="school-pill"><i data-lucide="star"></i> Horizon Academy</div>
+                <div class="school-pill"><i data-lucide="graduation-cap"></i> Iqra Public School</div>
+                <div class="school-pill"><i data-lucide="school"></i> Jinnah Model School</div>
+                <div class="school-pill"><i data-lucide="book-open"></i> Knowledge Hub</div>
+                <div class="school-pill"><i data-lucide="landmark"></i> Liberty Grammar School</div>
+                <div class="school-pill"><i data-lucide="star"></i> Mehran Academy</div>
+                <div class="school-pill"><i data-lucide="award"></i> National Model School</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHY TRUST NIM ====== -->
+    <section class="trust-why-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Schools <span>Trust NIM</span></h2>
+                <p>Built from the ground up for the needs of Pakistani educational institutions — reliable, fast, and
+                    secure.</p>
+            </div>
+            <div class="trust-why-grid">
+                <div class="trust-why-card">
+                    <div class="why-icon-wrap blue">
+                        <i data-lucide="shield"></i>
+                    </div>
+                    <h3>Bank-Grade Security</h3>
+                    <p>All data is encrypted end-to-end. Your students' and staff's information is always protected and
+                        private.</p>
+                </div>
+                <div class="trust-why-card">
+                    <div class="why-icon-wrap cyan">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3>Lightning Fast Performance</h3>
+                    <p>Optimized for low-bandwidth environments. Works perfectly even on slow internet connections
+                        across Pakistan.</p>
+                </div>
+                <div class="trust-why-card">
+                    <div class="why-icon-wrap purple">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3>Works on All Devices</h3>
+                    <p>Fully mobile-responsive. Whether your staff uses a phone, tablet, or desktop — NIM runs
+                        everywhere.</p>
+                </div>
+                <div class="trust-why-card">
+                    <div class="why-icon-wrap green">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <h3>Dedicated Local Support</h3>
+                    <p>Our Urdu &amp; English speaking support team is available 6 days a week to help your institute
+                        succeed.</p>
+                </div>
+                <div class="trust-why-card">
+                    <div class="why-icon-wrap pink">
+                        <i data-lucide="refresh-cw"></i>
+                    </div>
+                    <h3>Regular Updates</h3>
+                    <p>NIM evolves with your needs — new features, bug fixes, and improvements are shipped every
+                        month.</p>
+                </div>
+                <div class="trust-why-card">
+                    <div class="why-icon-wrap orange">
+                        <i data-lucide="settings"></i>
+                    </div>
+                    <h3>Easy Setup</h3>
+                    <p>Get your school up and running in under 24 hours. No technical expertise required — our team
+                        handles everything.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS ====== -->
+    <section class="trust-testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our <span>Clients Say</span></h2>
+                <p>Real feedback from real principals, teachers, and administrators who use NIM every day.</p>
+            </div>
+            <div class="testimonials-grid">
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                            data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">"NIM has completely transformed how we run our institute. From
+                        admissions to exams, everything is now effortless and accurate. I can't imagine going back."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar blue">A</div>
+                        <div>
+                            <strong>Principal Asif Mehmood</strong>
+                            <span>Crescent High School, Lahore</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card featured-testimonial">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                            data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">"The fee management and attendance system alone saved us countless
+                        hours every month. NIM is the best investment our school ever made. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar cyan">F</div>
+                        <div>
+                            <strong>Ms. Fatima Zahra</strong>
+                            <span>Admin Manager, Horizon Academy, Karachi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                            data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">"Our parents love the portal. They can see attendance, results, and
+                        fee status in real-time. NIM has made communication with parents completely seamless."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar purple">R</div>
+                        <div>
+                            <strong>Rana Bilal Ahmed</strong>
+                            <span>Director, Al-Noor Academy, Islamabad</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FULL-WIDTH CTA BAND ====== -->
+    <section class="trust-cta-band">
+        <div class="cta-band-glow"></div>
+        <div class="container">
+            <div class="cta-band-content">
+                <div class="cta-band-text">
+                    <h2>Ready to Join <span>50+ Trusted Institutes?</span></h2>
+                    <p>Start your digital transformation today. Setup is free and takes less than 24 hours.</p>
+                </div>
+                <div class="cta-band-actions">
+                    <a href="#" class="btn btn-white btn-lg">Get Started Free</a>
+                    <a href="index.html" class="btn btn-outline-white btn-lg">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top grid md-4">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i data-lucide="graduation-cap" class="logo-icon"></i>
+                        <span class="logo-text">NIM</span>
+                    </a>
+                    <p>NIM is a leading school management solution providing modern tools for modern education
+                        institutions in Pakistan.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="modules.html">Modules</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="screens.html">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#privacy">Privacy Policy</a></li>
+                        <li><a href="index.html#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for educational insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i data-lucide="arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NIM School Management Software. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // ===== ANIMATED COUNTER =====
+        function animateCounter(el) {
+            const target = parseInt(el.getAttribute('data-target'));
+            const suffix = el.getAttribute('data-suffix') || '';
+            const duration = 2000;
+            const stepTime = 20;
+            const steps = duration / stepTime;
+            const increment = target / steps;
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                el.textContent = Math.floor(current).toLocaleString() + suffix;
+            }, stepTime);
+        }
+
+        // Trigger counter when visible
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.trust-stat-number').forEach(el => {
+            counterObserver.observe(el);
+        });
+
+        // ===== SCROLL ENTRY ANIMATIONS =====
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.trust-stat-card, .trust-why-card, .testimonial-card').forEach(el => {
+            el.classList.add('reveal-on-scroll');
+            revealObserver.observe(el);
+        });
+    </script>
+</body>
+
+</html>

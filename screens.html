@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Preview | NIM School Management Software</title>
+    <meta name="description"
+        content="See NIM in action — explore live previews of the Dashboard, Student Profile, Attendance Panel, Exam Results, and Fee Management modules.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="screens.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="graduation-cap" class="logo-icon"></i>
+                <span class="logo-text">NIM</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="trusted.html">Trusted By</a></li>
+                <li><a href="usecases.html">Who Uses NIM</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="screens.html" class="active-nav">Preview</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="screens-hero">
+        <div class="screens-hero-glow"></div>
+        <div class="container">
+            <span class="badge"><i data-lucide="monitor"></i>&nbsp; Live System Preview</span>
+            <h1>See <span>NIM in Action</span></h1>
+            <p>Explore every screen of the NIM platform — designed for clarity, speed, and ease of use for schools
+                across Pakistan.</p>
+        </div>
+    </section>
+
+    <!-- ====== TABS NAV ====== -->
+    <section class="screens-tabs-section">
+        <div class="container">
+            <div class="tabs-nav" id="tabsNav">
+                <button class="tab-btn active" data-tab="dashboard">
+                    <i data-lucide="layout-dashboard"></i> Dashboard
+                </button>
+                <button class="tab-btn" data-tab="student">
+                    <i data-lucide="user"></i> Student Profile
+                </button>
+                <button class="tab-btn" data-tab="attendance">
+                    <i data-lucide="calendar-check"></i> Attendance
+                </button>
+                <button class="tab-btn" data-tab="exam">
+                    <i data-lucide="clipboard-list"></i> Exam Results
+                </button>
+                <button class="tab-btn" data-tab="fee">
+                    <i data-lucide="credit-card"></i> Fee Management
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SCREEN PREVIEWS ====== -->
+    <section class="screens-content-section">
+        <div class="container">
+
+            <!-- ==================== TAB 1: Dashboard ==================== -->
+            <div class="screen-panel active" id="tab-dashboard">
+                <div class="screen-info">
+                    <span class="screen-eyebrow">Module 01</span>
+                    <h2>Admin <span>Dashboard</span></h2>
+                    <p>Get a bird's eye view of your entire school — students, attendance, finances, and upcoming exams
+                        — all from one powerful dashboard.</p>
+                    <ul class="screen-features">
+                        <li><i data-lucide="check-circle"></i> Real-time attendance overview</li>
+                        <li><i data-lucide="check-circle"></i> Fee collection status</li>
+                        <li><i data-lucide="check-circle"></i> Upcoming exam notifications</li>
+                        <li><i data-lucide="check-circle"></i> Monthly analytics charts</li>
+                    </ul>
+                </div>
+                <div class="screen-mockup-wrap">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <div class="browser-url">nim.school/dashboard</div>
+                    </div>
+                    <div class="mockup-screen dashboard-mockup">
+                        <!-- Sidebar -->
+                        <div class="ms-sidebar">
+                            <div class="ms-logo-wrap">
+                                <div class="ms-logo-icon"><i data-lucide="graduation-cap"></i></div>
+                                <span>NIM</span>
+                            </div>
+                            <nav class="ms-nav">
+                                <div class="ms-nav-item active"><i
+                                        data-lucide="layout-dashboard"></i><span>Dashboard</span></div>
+                                <div class="ms-nav-item"><i data-lucide="users"></i><span>Students</span></div>
+                                <div class="ms-nav-item"><i data-lucide="calendar-check"></i><span>Attendance</span>
+                                </div>
+                                <div class="ms-nav-item"><i data-lucide="clipboard-list"></i><span>Exams</span></div>
+                                <div class="ms-nav-item"><i data-lucide="credit-card"></i><span>Fees</span></div>
+                                <div class="ms-nav-item"><i data-lucide="bar-chart-2"></i><span>Reports</span></div>
+                            </nav>
+                        </div>
+                        <!-- Main -->
+                        <div class="ms-main">
+                            <div class="ms-header">
+                                <div>
+                                    <div class="ms-greeting">Good Morning, Principal 👋</div>
+                                    <div class="ms-date">Friday, 27 Feb 2026</div>
+                                </div>
+                                <div class="ms-avatar">AK</div>
+                            </div>
+                            <!-- Stat Cards -->
+                            <div class="ms-stat-cards">
+                                <div class="ms-stat blue">
+                                    <div class="ms-stat-label">Total Students</div>
+                                    <div class="ms-stat-val">1,240</div>
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <div class="ms-stat green">
+                                    <div class="ms-stat-label">Today's Attendance</div>
+                                    <div class="ms-stat-val">94%</div>
+                                    <i data-lucide="calendar-check"></i>
+                                </div>
+                                <div class="ms-stat amber">
+                                    <div class="ms-stat-label">Pending Fees</div>
+                                    <div class="ms-stat-val">Rs. 45K</div>
+                                    <i data-lucide="credit-card"></i>
+                                </div>
+                                <div class="ms-stat purple">
+                                    <div class="ms-stat-label">Upcoming Exams</div>
+                                    <div class="ms-stat-val">3</div>
+                                    <i data-lucide="clipboard-list"></i>
+                                </div>
+                            </div>
+                            <!-- Chart placeholder -->
+                            <div class="ms-chart-area">
+                                <div class="ms-chart-title">Monthly Attendance Overview</div>
+                                <div class="ms-bars">
+                                    <div class="ms-bar-item">
+                                        <div class="ms-bar" style="height:75%"></div><span>Sep</span>
+                                    </div>
+                                    <div class="ms-bar-item">
+                                        <div class="ms-bar" style="height:90%"></div><span>Oct</span>
+                                    </div>
+                                    <div class="ms-bar-item">
+                                        <div class="ms-bar" style="height:82%"></div><span>Nov</span>
+                                    </div>
+                                    <div class="ms-bar-item">
+                                        <div class="ms-bar h-accent" style="height:88%"></div><span>Dec</span>
+                                    </div>
+                                    <div class="ms-bar-item">
+                                        <div class="ms-bar" style="height:94%"></div><span>Jan</span>
+                                    </div>
+                                    <div class="ms-bar-item">
+                                        <div class="ms-bar active-bar" style="height:91%"></div><span>Feb</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TAB 2: Student Profile ==================== -->
+            <div class="screen-panel" id="tab-student">
+                <div class="screen-info">
+                    <span class="screen-eyebrow">Module 02</span>
+                    <h2>Student <span>Profile</span></h2>
+                    <p>Complete student lifecycle management — from admission to graduation. Every detail about every
+                        student, always at your fingertips.</p>
+                    <ul class="screen-features">
+                        <li><i data-lucide="check-circle"></i> Complete personal & academic info</li>
+                        <li><i data-lucide="check-circle"></i> Parent & guardian contact</li>
+                        <li><i data-lucide="check-circle"></i> Attendance & performance history</li>
+                        <li><i data-lucide="check-circle"></i> Fee payment status</li>
+                    </ul>
+                </div>
+                <div class="screen-mockup-wrap">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <div class="browser-url">nim.school/students/profile/023</div>
+                    </div>
+                    <div class="mockup-screen student-mockup">
+                        <div class="sp-header-bar">
+                            <span class="sp-back"><i data-lucide="arrow-left"></i> Students</span>
+                            <span class="sp-title">Student Profile</span>
+                            <button class="sp-edit-btn">Edit Profile</button>
+                        </div>
+                        <div class="sp-body">
+                            <div class="sp-card-left">
+                                <div class="sp-avatar">MK</div>
+                                <div class="sp-name">Muhammad Ali Khan</div>
+                                <div class="sp-class">Class 8-A &nbsp; | &nbsp; Roll #023</div>
+                                <div class="sp-badge green-badge">Active</div>
+                                <div class="sp-info-row"><i data-lucide="phone"></i> 0300-1234567</div>
+                                <div class="sp-info-row"><i data-lucide="map-pin"></i> Lahore, Punjab</div>
+                                <div class="sp-divider"></div>
+                                <div class="sp-sub-heading">Parent Info</div>
+                                <div class="sp-info-row"><i data-lucide="user"></i> Mr. Khalid Khan</div>
+                                <div class="sp-info-row"><i data-lucide="phone"></i> 0321-9876543</div>
+                            </div>
+                            <div class="sp-card-right">
+                                <div class="sp-row-stats">
+                                    <div class="sp-mini-stat">
+                                        <div class="spms-val blue-text">92%</div>
+                                        <div class="spms-label">Attendance</div>
+                                    </div>
+                                    <div class="sp-mini-stat">
+                                        <div class="spms-val green-text">B+</div>
+                                        <div class="spms-label">Avg. Grade</div>
+                                    </div>
+                                    <div class="sp-mini-stat">
+                                        <div class="spms-val purple-text">Paid</div>
+                                        <div class="spms-label">Fee Status</div>
+                                    </div>
+                                </div>
+                                <div class="sp-section-title">Recent Exam Results</div>
+                                <table class="sp-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Total</th>
+                                            <th>Obtained</th>
+                                            <th>Grade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>100</td>
+                                            <td>88</td>
+                                            <td class="grade-a">A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>100</td>
+                                            <td>79</td>
+                                            <td class="grade-b">B+</td>
+                                        </tr>
+                                        <tr>
+                                            <td>English</td>
+                                            <td>100</td>
+                                            <td>83</td>
+                                            <td class="grade-a">A-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Urdu</td>
+                                            <td>100</td>
+                                            <td>91</td>
+                                            <td class="grade-a">A+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TAB 3: Attendance ==================== -->
+            <div class="screen-panel" id="tab-attendance">
+                <div class="screen-info">
+                    <span class="screen-eyebrow">Module 03</span>
+                    <h2>Attendance <span>Panel</span></h2>
+                    <p>Mark, track, and analyze student and staff attendance with precision. Automatic absence alerts
+                        keep parents informed instantly.</p>
+                    <ul class="screen-features">
+                        <li><i data-lucide="check-circle"></i> One-click daily attendance</li>
+                        <li><i data-lucide="check-circle"></i> Class-wise attendance view</li>
+                        <li><i data-lucide="check-circle"></i> Auto SMS alerts for absent students</li>
+                        <li><i data-lucide="check-circle"></i> Month-wise attendance calendar</li>
+                    </ul>
+                </div>
+                <div class="screen-mockup-wrap">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <div class="browser-url">nim.school/attendance/class-8a</div>
+                    </div>
+                    <div class="mockup-screen attendance-mockup">
+                        <div class="att-header">
+                            <div>
+                                <div class="att-title">Daily Attendance</div>
+                                <div class="att-subtitle">Class 8-A &nbsp;·&nbsp; Friday, 27 Feb 2026</div>
+                            </div>
+                            <div class="att-summary">
+                                <span class="att-chip present-chip"><i data-lucide="check"></i> Present: 28</span>
+                                <span class="att-chip absent-chip"><i data-lucide="x"></i> Absent: 4</span>
+                            </div>
+                        </div>
+                        <div class="att-progress-bar">
+                            <div class="att-progress-fill" style="width: 87.5%">87.5%</div>
+                        </div>
+                        <div class="att-student-list">
+                            <div class="att-list-header">
+                                <span>Roll #</span><span>Student Name</span><span>Status</span><span>Action</span>
+                            </div>
+                            <div class="att-row"><span>001</span><span>Ahmad Raza</span><span
+                                    class="att-present">Present</span><button
+                                    class="att-toggle present-toggle">✓</button></div>
+                            <div class="att-row"><span>002</span><span>Bilal Hussain</span><span
+                                    class="att-absent">Absent</span><button class="att-toggle absent-toggle">✗</button>
+                            </div>
+                            <div class="att-row"><span>003</span><span>Sara Nawaz</span><span
+                                    class="att-present">Present</span><button
+                                    class="att-toggle present-toggle">✓</button></div>
+                            <div class="att-row"><span>004</span><span>Fatima Malik</span><span
+                                    class="att-present">Present</span><button
+                                    class="att-toggle present-toggle">✓</button></div>
+                            <div class="att-row"><span>005</span><span>Usman Tariq</span><span
+                                    class="att-leave">Leave</span><button class="att-toggle leave-toggle">L</button>
+                            </div>
+                            <div class="att-row att-faded"><span>006</span><span>Zara Ahmed</span><span
+                                    class="att-present">Present</span><button
+                                    class="att-toggle present-toggle">✓</button></div>
+                        </div>
+                        <div class="att-footer-bar">
+                            <button class="att-save-btn">Save Attendance</button>
+                            <span class="att-sms-note"><i data-lucide="message-circle"></i> SMS alert will be sent to 2
+                                parents</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TAB 4: Exam Results ==================== -->
+            <div class="screen-panel" id="tab-exam">
+                <div class="screen-info">
+                    <span class="screen-eyebrow">Module 04</span>
+                    <h2>Exam <span>Results</span></h2>
+                    <p>Plan exams, enter marks, and auto-generate professional result sheets and report cards for every
+                        student with one click.</p>
+                    <ul class="screen-features">
+                        <li><i data-lucide="check-circle"></i> Online marks entry by teachers</li>
+                        <li><i data-lucide="check-circle"></i> Auto grade calculation</li>
+                        <li><i data-lucide="check-circle"></i> Class rank generation</li>
+                        <li><i data-lucide="check-circle"></i> Print-ready report cards</li>
+                    </ul>
+                </div>
+                <div class="screen-mockup-wrap">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <div class="browser-url">nim.school/exams/results/mid-term-2026</div>
+                    </div>
+                    <div class="mockup-screen exam-mockup">
+                        <div class="ex-header">
+                            <div class="ex-title">Mid-Term Results — 2026</div>
+                            <div class="ex-filters">
+                                <select class="ex-select">
+                                    <option>Class 8-A</option>
+                                </select>
+                                <button class="ex-print-btn"><i data-lucide="printer"></i> Print Cards</button>
+                            </div>
+                        </div>
+                        <div class="ex-summary-row">
+                            <div class="ex-sum-card blue">
+                                <div class="ex-sum-val">32</div>
+                                <div class="ex-sum-lbl">Total Students</div>
+                            </div>
+                            <div class="ex-sum-card green">
+                                <div class="ex-sum-val">30</div>
+                                <div class="ex-sum-lbl">Passed</div>
+                            </div>
+                            <div class="ex-sum-card red">
+                                <div class="ex-sum-val">2</div>
+                                <div class="ex-sum-lbl">Failed</div>
+                            </div>
+                            <div class="ex-sum-card purple">
+                                <div class="ex-sum-val">84%</div>
+                                <div class="ex-sum-lbl">Class Avg</div>
+                            </div>
+                        </div>
+                        <table class="ex-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Math</th>
+                                    <th>Science</th>
+                                    <th>English</th>
+                                    <th>Total</th>
+                                    <th>Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="top-rank">
+                                    <td>🥇 1</td>
+                                    <td>Zara Ahmed</td>
+                                    <td>96</td>
+                                    <td>92</td>
+                                    <td>94</td>
+                                    <td>282</td>
+                                    <td class="grade-a">A+</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Muhammad Ali</td>
+                                    <td>88</td>
+                                    <td>79</td>
+                                    <td>83</td>
+                                    <td>250</td>
+                                    <td class="grade-a">A</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sara Nawaz</td>
+                                    <td>85</td>
+                                    <td>82</td>
+                                    <td>78</td>
+                                    <td>245</td>
+                                    <td class="grade-b">B+</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Ahmad Raza</td>
+                                    <td>76</td>
+                                    <td>80</td>
+                                    <td>74</td>
+                                    <td>230</td>
+                                    <td class="grade-b">B</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Fatima Malik</td>
+                                    <td>72</td>
+                                    <td>68</td>
+                                    <td>75</td>
+                                    <td>215</td>
+                                    <td class="grade-c">C+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TAB 5: Fee Management ==================== -->
+            <div class="screen-panel" id="tab-fee">
+                <div class="screen-info">
+                    <span class="screen-eyebrow">Module 05</span>
+                    <h2>Fee <span>Management</span></h2>
+                    <p>Set fee structures, collect payments, generate receipts, track defaulters, and monitor your
+                        school's complete financial health.</p>
+                    <ul class="screen-features">
+                        <li><i data-lucide="check-circle"></i> Monthly fee invoices</li>
+                        <li><i data-lucide="check-circle"></i> Payment tracking & receipts</li>
+                        <li><i data-lucide="check-circle"></i> Defaulter alerts & reports</li>
+                        <li><i data-lucide="check-circle"></i> Income & expense statements</li>
+                    </ul>
+                </div>
+                <div class="screen-mockup-wrap">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <div class="browser-url">nim.school/fees/february-2026</div>
+                    </div>
+                    <div class="mockup-screen fee-mockup">
+                        <div class="fee-header">
+                            <div class="fee-title">Fee Management — February 2026</div>
+                            <button class="fee-collect-btn"><i data-lucide="plus"></i> Collect Fee</button>
+                        </div>
+                        <div class="fee-summary-grid">
+                            <div class="fee-sum-card blue">
+                                <i data-lucide="trending-up"></i>
+                                <div class="fee-sum-val">Rs. 2,40,000</div>
+                                <div class="fee-sum-lbl">Total Billed</div>
+                            </div>
+                            <div class="fee-sum-card green">
+                                <i data-lucide="check-circle"></i>
+                                <div class="fee-sum-val">Rs. 1,95,000</div>
+                                <div class="fee-sum-lbl">Collected</div>
+                            </div>
+                            <div class="fee-sum-card red">
+                                <i data-lucide="alert-circle"></i>
+                                <div class="fee-sum-val">Rs. 45,000</div>
+                                <div class="fee-sum-lbl">Pending</div>
+                            </div>
+                        </div>
+                        <div class="fee-table-wrap">
+                            <div class="fee-table-header">
+                                <span>Recent Transactions</span>
+                                <input type="text" class="fee-search" placeholder="Search student...">
+                            </div>
+                            <table class="fee-table">
+                                <thead>
+                                    <tr>
+                                        <th>Student</th>
+                                        <th>Class</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ahmad Raza</td>
+                                        <td>8-A</td>
+                                        <td>Rs. 3,500</td>
+                                        <td>24 Feb</td>
+                                        <td><span class="fee-paid">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sara Nawaz</td>
+                                        <td>7-B</td>
+                                        <td>Rs. 3,500</td>
+                                        <td>23 Feb</td>
+                                        <td><span class="fee-paid">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bilal Hussain</td>
+                                        <td>9-A</td>
+                                        <td>Rs. 4,000</td>
+                                        <td>—</td>
+                                        <td><span class="fee-pending">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fatima Malik</td>
+                                        <td>6-C</td>
+                                        <td>Rs. 3,000</td>
+                                        <td>22 Feb</td>
+                                        <td><span class="fee-paid">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Usman Tariq</td>
+                                        <td>10-A</td>
+                                        <td>Rs. 5,000</td>
+                                        <td>—</td>
+                                        <td><span class="fee-overdue">Overdue</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="screens-cta">
+        <div class="screens-cta-glow"></div>
+        <div class="container">
+            <h2>Ready to Experience NIM <span>In Your School?</span></h2>
+            <p>Everything you just saw — fully set up for your school in under 24 hours. For free.</p>
+            <div class="screens-cta-btns">
+                <a href="#" class="btn btn-white btn-lg">Start Free Trial</a>
+                <a href="modules.html" class="btn btn-outline-white btn-lg">Explore All Modules</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top grid md-4">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i data-lucide="graduation-cap" class="logo-icon"></i>
+                        <span class="logo-text">NIM</span>
+                    </a>
+                    <p>NIM is a leading school management solution providing modern tools for modern educational
+                        institutions in Pakistan.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="modules.html">Modules</a></li>
+                        <li><a href="screens.html">Preview</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#privacy">Privacy Policy</a></li>
+                        <li><a href="index.html#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe for educational insights and product updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i data-lucide="arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NIM School Management Software. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Tab switching
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const panels = document.querySelectorAll('.screen-panel');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-tab');
+                tabBtns.forEach(b => b.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('tab-' + target).classList.add('active');
+            });
+        });
+
+        // Scroll reveal
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.screen-panel').forEach(el => {
+            el.classList.add('reveal-anim');
+            obs.observe(el);
+        });
+    </script>
+</body>
+
+</html>

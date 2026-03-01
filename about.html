@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NIM School Management Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 62px;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .about-hero h1 span {
+            background: linear-gradient(135deg, #818cf8, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-hero p {
+            font-size: 20px;
+            color: #94a3b8;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 24px;
+            color: #0f172a;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 991px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+        }
+    </style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="graduation-cap" class="logo-icon"></i>
+                <span class="logo-text">NIM</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active-nav">About</a></li>
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="trusted.html">Trusted By</a></li>
+                <li><a href="usecases.html">Who Uses NIM</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="screens.html">Preview</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <div class="container">
+            <span class="badge"
+                style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 28px; backdrop-filter: blur(8px);">
+                <i data-lucide="info"></i>&nbsp; Our Story
+            </span>
+            <h1>About <span>NIM</span></h1>
+            <p>Our mission is to empower educational institutions with the most advanced management tools.</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="assets/dashboard.png" alt="Our Journey">
+                </div>
+                <div class="about-content">
+                    <h2>Empowering the <span>Next Generation</span></h2>
+                    <p>NIM started with a simple belief: school management should be simple, efficient, and digital.</p>
+                    <p>Today, hundreds of schools use our platform to manage their admissions, fees, and results daily.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top grid md-4">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i data-lucide="graduation-cap" class="logo-icon"></i>
+                        <span class="logo-text">NIM</span>
+                    </a>
+                    <p>NIM is a leading school management solution worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
