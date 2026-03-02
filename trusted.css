@@ -358,7 +358,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .testimonial-card {
@@ -367,6 +367,8 @@
     border-radius: var(--radius-lg);
     padding: 40px;
     transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-card:hover {
@@ -376,8 +378,6 @@
 
 .featured-testimonial {
     border-color: var(--primary);
-    position: relative;
-    top: -12px;
     box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
 }
 
@@ -400,6 +400,7 @@
     line-height: 1.8;
     margin-bottom: 28px;
     font-style: italic;
+    flex: 1;
 }
 
 .testimonial-author {
