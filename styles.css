@@ -822,29 +822,329 @@ span {
     color: var(--text-muted);
 }
 
-/* Dashboard Preview */
+/* Dashboard Preview (kept for other pages) */
 .mockup {
     width: 100%;
     border-radius: var(--radius-md);
     box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3);
 }
 
-.benefit-list {
-    margin: 32px 0 40px;
+/* =====================================================
+   WHY CHOOSE NIM — REDESIGNED SECTION
+   ===================================================== */
+
+.why-nim-section {
+    background: var(--bg-light);
+    overflow: hidden;
 }
 
-.benefit-list li {
+/* ---- Header ---- */
+.why-nim-header {
+    background: linear-gradient(150deg, var(--primary-dark) 0%, var(--primary) 55%, #d4354f 100%);
+    padding: 80px 0 90px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.why-nim-header::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.why-nim-header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -40px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(251,191,36,0.18) 0%, transparent 65%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.why-nim-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(251,191,36,0.18);
+    border: 1px solid rgba(251,191,36,0.45);
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    padding: 7px 18px;
+    border-radius: 50px;
+    margin-bottom: 22px;
+}
+
+.why-nim-label svg {
+    width: 14px; height: 14px;
+    stroke: var(--secondary);
+}
+
+.why-nim-header h2 {
+    font-size: clamp(28px, 4vw, 48px);
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.why-nim-header h2 span {
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+}
+
+.why-nim-header p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.78);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+/* ---- Cards Grid ---- */
+.why-nim-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 60px 0 70px;
+}
+
+.why-nim-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px 28px;
+    border: 1px solid #e8edf5;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    cursor: default;
+}
+
+.why-nim-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--icon-bg, rgba(178,31,52,0.05)), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    border-radius: 20px;
+}
+
+.why-nim-card:hover {
+    transform: translateY(-8px);
+    border-color: transparent;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.why-nim-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Icon */
+.why-nim-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--icon-bg, rgba(178,31,52,0.1));
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-    font-weight: 500;
+    justify-content: center;
+    margin-bottom: 22px;
+    transition: transform 0.3s ease;
 }
 
-.check {
-    width: 20px;
-    height: 20px;
+.why-nim-card:hover .why-nim-card-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.why-nim-card-icon svg {
+    width: 26px;
+    height: 26px;
+    stroke: var(--icon-clr, #b21f34);
+}
+
+/* Card Text */
+.why-nim-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.why-nim-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Card Stat Badge */
+.why-nim-card-stat {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--icon-clr, #b21f34);
+    background: var(--icon-bg, rgba(178,31,52,0.08));
+    padding: 6px 14px;
+    border-radius: 8px;
+}
+
+.why-nim-card-stat span {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    -webkit-text-fill-color: var(--text-muted);
+}
+
+/* ---- Bottom CTA Strip ---- */
+.why-nim-cta-strip {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #c94060 100%);
+    padding: 52px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-nim-cta-strip::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: -80px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.why-nim-cta-strip::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 250px; height: 250px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.why-nim-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.why-nim-cta-text h3 {
+    font-size: clamp(20px, 2.5vw, 28px);
+    color: #fff;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.why-nim-cta-text h3 span {
     color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+}
+
+.why-nim-cta-text p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    margin: 0;
+}
+
+.why-nim-cta-btns {
+    display: flex;
+    gap: 14px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.why-nim-cta-btns .btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.why-nim-cta-btns .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.why-nim-cta-btns .btn-secondary {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(8px);
+}
+
+.why-nim-cta-btns .btn-secondary:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   RESPONSIVE — WHY CHOOSE NIM SECTION
+   ===================================================== */
+
+@media (max-width: 1024px) {
+    .why-nim-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-nim-header {
+        padding: 60px 0 70px;
+    }
+
+    .why-nim-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 50px 0 60px;
+    }
+
+    .why-nim-cta-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .why-nim-cta-btns {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-nim-header h2 {
+        font-size: 26px;
+    }
+
+    .why-nim-header p {
+        font-size: 15px;
+    }
+
+    .why-nim-card {
+        padding: 24px 20px;
+    }
+
+    .why-nim-cta-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .why-nim-cta-btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* Pricing */
@@ -1192,15 +1492,6 @@ span {
 
     .feature-card h3 {
         font-size: 20px;
-    }
-
-    /* Dashboard */
-    .dashboard .grid {
-        gap: 32px;
-    }
-
-    .dashboard-image {
-        order: -1;
     }
 
     /* Section headers */
@@ -1780,5 +2071,412 @@ span {
 
     .cta-box h2 {
         font-size: 26px;
+    }
+}
+
+/* =====================================================
+   NIM IN ACTION SECTION
+   ===================================================== */
+
+.nim-action-section {
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.nim-action-section::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(178, 31, 52, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.nim-action-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Grid Layout */
+.nim-action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+/* ---- LEFT: IMAGE ---- */
+.nim-action-image {
+    position: relative;
+}
+
+.nim-action-img-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: visible;
+}
+
+.nim-action-img-wrapper img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 30px 80px rgba(178, 31, 52, 0.15), 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nim-action-img-wrapper:hover img {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 40px 100px rgba(178, 31, 52, 0.2), 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* Glow behind image */
+.nim-img-glow {
+    position: absolute;
+    inset: 20px;
+    background: linear-gradient(135deg, rgba(178, 31, 52, 0.18), rgba(251, 191, 36, 0.12));
+    border-radius: 20px;
+    filter: blur(40px);
+    z-index: -1;
+    transform: translateY(12px) scale(0.95);
+}
+
+/* Floating Badges */
+.nim-float-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 12px 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0,0,0,0.06);
+    z-index: 10;
+    animation: nim-badge-float 3s ease-in-out infinite;
+}
+
+.nim-float-badge.badge-top {
+    top: -22px;
+    right: -20px;
+    animation-delay: 0s;
+}
+
+.nim-float-badge.badge-bottom {
+    bottom: -22px;
+    left: -20px;
+    animation-delay: 1.5s;
+}
+
+@keyframes nim-badge-float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+
+.nim-badge-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.nim-badge-icon svg {
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    stroke: #fff;
+}
+
+.nim-badge-icon--gold {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+}
+
+.nim-badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.nim-badge-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.nim-badge-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* ---- RIGHT: CONTENT ---- */
+.nim-action-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Label / Tag */
+.nim-action-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 7px 16px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.nim-action-label svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--primary);
+}
+
+.nim-action-content h2 {
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.25;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.nim-action-desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* Feature Highlights */
+.nim-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nim-highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    border: 1px solid #f1f5f9;
+    background: #fafbfc;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.nim-highlight-item:hover {
+    border-color: var(--primary-light);
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(178, 31, 52, 0.08);
+    transform: translateX(4px);
+}
+
+.nim-highlight-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-light), #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(178, 31, 52, 0.12);
+    transition: background 0.3s ease;
+}
+
+.nim-highlight-item:hover .nim-highlight-icon {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.nim-highlight-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--primary);
+    transition: stroke 0.3s ease;
+}
+
+.nim-highlight-item:hover .nim-highlight-icon svg {
+    stroke: #fff;
+}
+
+.nim-highlight-body h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.nim-highlight-body p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Buttons */
+.nim-action-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.nim-action-btns .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nim-action-btns .btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Outline Dark Button */
+.btn-outline-dark {
+    padding: 12px 26px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid var(--text-main);
+    color: var(--text-main);
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-outline-dark:hover {
+    background: var(--text-main);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(30, 41, 59, 0.2);
+}
+
+/* =====================================================
+   RESPONSIVE - NIM IN ACTION SECTION
+   ===================================================== */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .nim-action-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .nim-action-image {
+        order: 1;
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .nim-action-content {
+        order: 2;
+    }
+
+    .nim-float-badge.badge-top {
+        top: -16px;
+        right: 0px;
+    }
+
+    .nim-float-badge.badge-bottom {
+        bottom: -16px;
+        left: 0px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .nim-action-grid {
+        gap: 36px;
+    }
+
+    .nim-action-content h2 {
+        font-size: 24px;
+    }
+
+    .nim-action-desc {
+        font-size: 15px;
+    }
+
+    .nim-float-badge {
+        padding: 9px 13px;
+        gap: 9px;
+        border-radius: 10px;
+    }
+
+    .nim-badge-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+    }
+
+    .nim-badge-icon svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .nim-badge-title {
+        font-size: 12px;
+    }
+
+    .nim-badge-sub {
+        font-size: 10px;
+    }
+
+    .nim-float-badge.badge-top {
+        top: -12px;
+        right: 6px;
+    }
+
+    .nim-float-badge.badge-bottom {
+        bottom: -12px;
+        left: 6px;
+    }
+
+    .nim-highlight-item {
+        padding: 14px 16px;
+        gap: 14px;
+    }
+
+    .nim-highlight-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nim-action-btns {
+        flex-direction: column;
+    }
+
+    .nim-action-btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-outline-dark {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
     }
 }
