@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIM Features - Complete Institute Management Solution</title>
+    <meta name="description" content="Explore all features of NIM - Staff Management, Student Management, Fee Management, Attendance, Payroll, Exams, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .feature-detail-section {
+            padding: 80px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .feature-detail-section:nth-child(even) {
+            background: #f9fafb;
+        }
+        .feature-detail-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .feature-detail-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .feature-list-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .feature-list-item i {
+            color: var(--primary);
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+                <a href="index.html" class="logo">
+                <i data-lucide="graduation-cap" class="logo-icon"></i>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features-detailed.html" class="active-nav">Features</a></li>
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Complete <span>Features</span> for Modern Institutes</h1>
+                <p>Everything you need to manage your educational institution efficiently</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>NIM - Noshahi Institute <span>Manager</span></h2>
+                <p class="lead-text">NIM (Noshahi Institute Manager) is a modern school and institute management software designed to simplify daily administrative tasks and solve common management problems faced by educational institutes. The system provides an all-in-one digital solution for managing students, staff, classes, attendance, fees, payroll, exams, and reports from a single dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 1: Staff Management -->
+    <section class="feature-detail-section">
+        <div class="container">
+            <div class="feature-detail-header">
+                <div class="feature-detail-icon">
+                    <i data-lucide="users"></i>
+                </div>
+                <div>
+                    <h2>Staff Management</h2>
+                    <p>Complete staff administration and HR management system</p>
+                </div>
+            </div>
+            <div class="feature-list">
+                <div class="feature-list-item">
+                    <i data-lucide="user-plus"></i>
+                    <div>
+                        <h4>Add and Manage Staff Records</h4>
+                        <p>Easily add new staff members with complete profile information including personal details, qualifications, and employment history.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="dollar-sign"></i>
+                    <div>
+                        <h4>Assign Salaries Easily</h4>
+                        <p>Set up salary structures, allowances, and deductions for each staff member with flexible configuration options.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="briefcase"></i>
+                    <div>
+                        <h4>Manage Staff Profiles and Roles</h4>
+                        <p>Assign roles, permissions, and responsibilities to staff members based on their positions and departments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 2: Student Management -->
+    <section class="feature-detail-section">
+        <div class="container">
+            <div class="feature-detail-header">
+                <div class="feature-detail-icon">
+                    <i data-lucide="user-check"></i>
+                </div>
+                <div>
+                    <h2>Student Management</h2>
+                    <p>Comprehensive student information and academic tracking system</p>
+                </div>
+            </div>
+            <div class="feature-list">
+                <div class="feature-list-item">
+                    <i data-lucide="file-plus"></i>
+                    <div>
+                        <h4>Add Student Records</h4>
+                        <p>Register new students with complete personal information, guardian details, and medical records in one place.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="school"></i>
+                    <div>
+                        <h4>Manage Admissions and Classes</h4>
+                        <p>Handle student admissions, class assignments, and section transfers seamlessly throughout the academic year.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="file-text"></i>
+                    <div>
+                        <h4>Access Student Reports Anytime</h4>
+                        <p>Generate and view comprehensive student reports including academic performance, attendance, and behavior records instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 3: Class & Subject Management -->
+    <section class="feature-detail-section">
+        <div class="container">
+            <div class="feature-detail-header">
+                <div class="feature-detail-icon">
+                    <i data-lucide="book-open"></i>
+                </div>
+                <div>
+                    <h2>Class & Subject Management</h2>
+                    <p>Organize your academic structure efficiently</p>
+                </div>
+            </div>
+            <div class="feature-list">
+                <div class="feature-list-item">
+                    <i data-lucide="layers"></i>
+                    <div>
+                        <h4>Create Classes and Sections</h4>
+                        <p>Set up your institution's class structure with multiple sections, capacity limits, and grade levels.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="book"></i>
+                    <div>
+                        <h4>Assign Subjects Efficiently</h4>
+                        <p>Map subjects to classes, assign teachers, and manage subject-wise curriculum planning with ease.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="calendar"></i>
+                    <div>
+                        <h4>Organize Academic Sessions</h4>
+                        <p>Manage academic years, terms, and sessions with automated promotion and roll-over features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 4: Fee Management -->
+    <section class="feature-detail-section">
+        <div class="container">
+            <div class="feature-detail-header">
+                <div class="feature-detail-icon">
+                    <i data-lucide="credit-card"></i>
+                </div>
+                <div>
+                    <h2>Fee Management</h2>
+                    <p>Complete financial tracking and fee collection system</p>
+                </div>
+            </div>
+            <div class="feature-list">
+                <div class="feature-list-item">
+                    <i data-lucide="tag"></i>
+                    <div>
+                        <h4>Assign Student Fees</h4>
+                        <p>Create custom fee structures for different classes, apply discounts, and manage fee categories effortlessly.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="trending-up"></i>
+                    <div>
+                        <h4>Track Paid and Pending Fees</h4>
+                        <p>Monitor fee collection status in real-time, send automated reminders, and track payment history for each student.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="file-bar-chart"></i>
+                    <div>
+                        <h4>Generate Fee Reports Easily</h4>
+                        <p>Create detailed financial reports, fee collection summaries, and defaulter lists with just a few clicks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 5: Attendance System -->
+    <section class="feature-detail-section">
+        <div class="container">
+            <div class="feature-detail-header">
+                <div class="feature-detail-icon">
+                    <i data-lucide="calendar-check"></i>
+                </div>
+                <div>
+                    <h2>Attendance System</h2>
+                    <p>Smart and efficient attendance tracking</p>
+                </div>
+            </div>
+            <div class="feature-list">
+                <div class="feature-list-item">
+                    <i data-lucide="mouse-pointer-click"></i>
+                    <div>
+                        <h4>One-Click Attendance System</h4>
+                        <p>Mark attendance for entire classes in seconds with an intuitive one-click interface that saves time.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="user-check"></i>
+                    <div>
+                        <h4>Manage Student Attendance Records</h4>
+                        <p>Maintain complete attendance history with date-wise records, absence reasons, and leave management.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="bar-chart"></i>
+                    <div>
+                        <h4>View Attendance Reports Instantly</h4>
+                        <p>Access detailed attendance analytics, monthly summaries, and individual student attendance percentages anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 6: Payroll Management -->
+    <section class="feature-detail-section">
+        <div class="container">
+            <div class="feature-detail-header">
+                <div class="feature-detail-icon">
+                    <i data-lucide="dollar-sign"></i>
+                </div>
+                <div>
+                    <h2>Payroll Management</h2>
+                    <p>Automated salary processing and payroll system</p>
+                </div>
+            </div>
+            <div class="feature-list">
+                <div class="feature-list-item">
+                    <i data-lucide="file-text"></i>
+                    <div>
+                        <h4>Generate Salary Slips</h4>
+                        <p>Automatically create professional salary slips with detailed breakdowns of earnings, deductions, and net pay.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="wallet"></i>
+                    <div>
+                        <h4>Manage Payroll and Staff Payments</h4>
+                        <p>Handle monthly payroll processing, track payment history, and manage salary disbursements efficiently.</p>
+                    </div>
+                </div>
+                <div class="feature-list-item">
+                    <i data-lucide="zap"></i>
+                    <div>
+                        <h4>Simplify Salary Processing</h4>
+                        <p>Automate complex calculations including overtime, bonuses, taxes, and deductions with customizable rules.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
