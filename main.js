@@ -282,5 +282,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     injectFloatingActions();
-});
 
+    // ============================================================
+    //  ANIMATED COUNTERS — NIM Trust CTA Section
+    // ============================================================
+    function initNimCounters() {
+        const counters = document.querySelectorAll('.nim-counter');
+        if (!counters.length) return;
+
+        const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+        function animateCounter(el) {
+            const target = parseInt(el.getAttribute('data-target'), 10);
+            const duration = 1800; // ms
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = easeOut(progress);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.textContent = target;
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        counters.forEach(counter => observer.observe(counter));
+    }
+
+    initNimCounters();
+});

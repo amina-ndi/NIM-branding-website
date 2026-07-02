@@ -1007,88 +1007,389 @@ span {
     -webkit-text-fill-color: var(--text-muted);
 }
 
-/* ---- Bottom CTA Strip ---- */
-.why-nim-cta-strip {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #c94060 100%);
-    padding: 52px 0;
+/* ============================================================
+   NIM TRUST CTA SECTION — Premium Redesign
+   ============================================================ */
+
+.nim-trust-cta-section {
     position: relative;
+    padding: 40px 0 40px;
     overflow: hidden;
+    background: linear-gradient(135deg,
+        #ffffff 0%,
+        #f5f5f7 40%,
+        #eef0f5 100%);
+    border-top: 1px solid rgba(0,0,0,0.08);
 }
 
-.why-nim-cta-strip::before {
-    content: '';
+/* ---- Animated floating particles ---- */
+.nim-cta-particles {
     position: absolute;
-    top: -80px; left: -80px;
-    width: 300px; height: 300px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 50%;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
 }
 
-.why-nim-cta-strip::after {
-    content: '';
+.nim-particle {
     position: absolute;
-    bottom: -60px; right: -60px;
-    width: 250px; height: 250px;
-    background: rgba(255,255,255,0.05);
     border-radius: 50%;
+    animation: nim-particle-float 8s infinite ease-in-out;
+    opacity: 0;
 }
 
-.why-nim-cta-inner {
+.nim-particle:nth-child(1)  { width:6px;  height:6px;  background: rgba(128,0,32,0.25);   top:15%; left:10%; animation-delay:0s;    animation-duration:7s;  }
+.nim-particle:nth-child(2)  { width:4px;  height:4px;  background: rgba(180,60,0,0.2);    top:70%; left:20%; animation-delay:1.2s;  animation-duration:9s;  }
+.nim-particle:nth-child(3)  { width:8px;  height:8px;  background: rgba(128,0,32,0.18);   top:30%; left:80%; animation-delay:0.5s;  animation-duration:6s;  }
+.nim-particle:nth-child(4)  { width:3px;  height:3px;  background: rgba(230,92,0,0.25);   top:80%; left:75%; animation-delay:2.1s;  animation-duration:8s;  }
+.nim-particle:nth-child(5)  { width:5px;  height:5px;  background: rgba(128,0,32,0.2);    top:50%; left:50%; animation-delay:0.8s;  animation-duration:10s; }
+.nim-particle:nth-child(6)  { width:7px;  height:7px;  background: rgba(180,60,0,0.15);   top:20%; left:40%; animation-delay:3s;    animation-duration:7s;  }
+.nim-particle:nth-child(7)  { width:4px;  height:4px;  background: rgba(128,0,32,0.22);   top:60%; left:90%; animation-delay:1.8s;  animation-duration:9s;  }
+.nim-particle:nth-child(8)  { width:6px;  height:6px;  background: rgba(230,92,0,0.18);   top:10%; left:60%; animation-delay:2.5s;  animation-duration:6s;  }
+
+@keyframes nim-particle-float {
+    0%   { opacity:0; transform: translateY(0) scale(0.5); }
+    20%  { opacity:1; }
+    80%  { opacity:0.8; }
+    100% { opacity:0; transform: translateY(-80px) scale(1.2); }
+}
+
+/* ---- Glow orbs ---- */
+.nim-cta-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+    animation: nim-orb-pulse 6s infinite ease-in-out alternate;
+}
+.nim-cta-orb--1 { width:420px; height:420px; background: radial-gradient(circle, rgba(128,0,32,0.08) 0%, transparent 70%); top:-100px; left:-80px; animation-delay:0s; }
+.nim-cta-orb--2 { width:350px; height:350px; background: radial-gradient(circle, rgba(230,92,0,0.06) 0%, transparent 70%);  bottom:-80px; right:-60px; animation-delay:2s; }
+.nim-cta-orb--3 { width:280px; height:280px; background: radial-gradient(circle, rgba(128,0,32,0.04) 0%, transparent 70%);  top:50%; left:50%; transform:translate(-50%,-50%); animation-delay:4s; }
+
+@keyframes nim-orb-pulse {
+    0%   { opacity:0.6; transform: scale(1); }
+    100% { opacity:1;   transform: scale(1.12); }
+}
+
+/* ---- Top badge ---- */
+.nim-cta-badge-wrap {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-    position: relative;
-    z-index: 1;
+    justify-content: center;
+    margin-bottom: 12px;
 }
-
-.why-nim-cta-text h3 {
-    font-size: clamp(20px, 2.5vw, 28px);
-    color: #fff;
-    margin-bottom: 6px;
-    line-height: 1.3;
-}
-
-.why-nim-cta-text h3 span {
-    color: var(--secondary);
-    -webkit-text-fill-color: var(--secondary);
-}
-
-.why-nim-cta-text p {
-    font-size: 15px;
-    color: rgba(255,255,255,0.75);
-    margin: 0;
-}
-
-.why-nim-cta-btns {
-    display: flex;
-    gap: 14px;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-}
-
-.why-nim-cta-btns .btn svg {
-    width: 16px;
-    height: 16px;
-}
-
-.why-nim-cta-btns .btn {
+.nim-cta-top-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-}
-
-.why-nim-cta-btns .btn-secondary {
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 20px;
+    background: rgba(128,0,32,0.08);
+    border: 1px solid rgba(128,0,32,0.3);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #800020;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     backdrop-filter: blur(8px);
 }
+.nim-cta-top-badge svg {
+    width: 15px; height: 15px;
+    color: #800020;
+}
 
-.why-nim-cta-btns .btn-secondary:hover {
-    background: rgba(255,255,255,0.25);
+/* ---- Headline ---- */
+.nim-cta-headline {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.nim-cta-headline h2 {
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 800;
+    color: #111111;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+}
+.nim-cta-number-highlight {
+    position: relative;
+    display: inline-block;
+    color: #800020;
+    -webkit-text-fill-color: #800020;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+}
+.nim-cta-headline p {
+    font-size: clamp(15px, 1.6vw, 18px);
+    color: rgba(0,0,0,0.6);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ---- Stats row ---- */
+.nim-cta-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 24px;
+    padding: 20px 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    flex-wrap: wrap;
+    row-gap: 28px;
+}
+.nim-cta-stat-card {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.nim-cta-stat-card:hover { transform: translateY(-4px); }
+
+.nim-cta-stat-icon {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    background: rgba(128,0,32,0.08);
+    border: 1px solid rgba(128,0,32,0.2);
+    display: flex; align-items: center; justify-content: center;
+}
+.nim-cta-stat-icon svg {
+    width: 22px; height: 22px;
+    color: #800020;
+}
+.nim-cta-stat-value {
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 800;
+    color: #111111;
+    -webkit-text-fill-color: #111111;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    line-height: 1;
+}
+.nim-cta-stat-label {
+    font-size: 13px;
+    color: rgba(0,0,0,0.5);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+.nim-cta-stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    margin: 0 16px;
+}
+
+/* ---- Trust strip ---- */
+.nim-cta-trust-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+.nim-cta-trust-label {
+    font-size: 13px;
+    color: rgba(0,0,0,0.45);
+    font-weight: 500;
+    white-space: nowrap;
+}
+.nim-cta-trust-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nim-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(128,0,32,0.06);
+    border: 1px solid rgba(128,0,32,0.18);
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #800020;
+    transition: all 0.25s ease;
+    cursor: default;
+}
+.nim-trust-badge:hover {
+    background: rgba(128,0,32,0.12);
+    border-color: rgba(128,0,32,0.4);
+    color: #5a0016;
     transform: translateY(-2px);
 }
+.nim-trust-badge svg {
+    width: 13px; height: 13px;
+}
+
+/* ---- CTA Action row ---- */
+.nim-cta-action-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.nim-cta-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+}
+.nim-cta-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* Primary glowing button */
+.nim-cta-btn--primary {
+    background: #800020;
+    color: #000;
+    box-shadow: 0 8px 32px rgba(128,0,32,0.35), 0 2px 8px rgba(0,0,0,0.15);
+    border: 1px solid rgba(128,0,32,0.4);
+}
+.nim-cta-btn--primary:hover {
+    background: #FFD700;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 16px 48px rgba(255,215,0,0.45), 0 4px 16px rgba(0,0,0,0.2);
+    border-color: rgba(255,215,0,0.5);
+    color: #fff;
+}
+.nim-cta-btn--primary:hover svg {
+    color: #800020;
+}
+.nim-cta-btn-glow {
+    position: absolute;
+    inset: -2px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #FFD700, #ffcc00);
+    opacity: 0;
+    filter: blur(12px);
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+.nim-cta-btn--primary:hover .nim-cta-btn-glow { opacity: 0.5; }
+.nim-cta-btn--primary:hover .nim-cta-btn-tag {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+.nim-cta-btn-tag {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 6px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+/* Glass button */
+.nim-cta-btn--glass {
+    background: rgba(128,0,32,0.06);
+    color: #800020;
+    border: 1px solid rgba(128,0,32,0.25);
+    box-shadow: 0 4px 20px rgba(128,0,32,0.08);
+}
+.nim-cta-btn--glass:hover {
+    background: #FFD700;
+    border-color: #FFD700;
+    transform: translateY(-3px);
+    color: #000;
+    box-shadow: 0 8px 28px rgba(255,215,0,0.35);
+}
+
+/* Ghost button */
+.nim-cta-btn--ghost {
+    background: transparent;
+    color: rgba(0,0,0,0.55);
+    border: 1px solid rgba(0,0,0,0.15);
+}
+.nim-cta-btn--ghost:hover {
+    background: #FFD700;
+    color: #000;
+    border-color: #FFD700;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(255,215,0,0.2);
+}
+
+/* ---- Reassurance line ---- */
+.nim-cta-reassurance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+.nim-cta-reassurance span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: rgba(0,0,0,0.45);
+    font-weight: 500;
+}
+.nim-cta-reassurance svg {
+    width: 15px; height: 15px;
+    color: #16a34a;
+    flex-shrink: 0;
+}
+
+/* =====================================================
+   RESPONSIVE — NIM TRUST CTA SECTION
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .nim-cta-stats { padding: 28px 24px; gap: 0; }
+    .nim-cta-stat-divider { height: 40px; margin: 0 12px; }
+}
+
+@media (max-width: 768px) {
+    .nim-trust-cta-section { padding: 72px 0 60px; }
+    .nim-cta-stats {
+        border-radius: 18px;
+        padding: 24px 20px;
+        gap: 24px;
+    }
+    .nim-cta-stat-divider { display: none; }
+    .nim-cta-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .nim-cta-action-row { flex-direction: column; align-items: stretch; }
+    .nim-cta-btn { justify-content: center; }
+    .nim-cta-reassurance { flex-direction: column; gap: 12px; }
+}
+
+@media (max-width: 480px) {
+    .nim-cta-headline h2 { font-size: 30px; }
+    .nim-cta-stats { grid-template-columns: 1fr; }
+    .nim-cta-trust-strip { flex-direction: column; gap: 12px; }
+}
+
+
 
 /* =====================================================
    RESPONSIVE — WHY CHOOSE NIM SECTION
@@ -1105,46 +1406,17 @@ span {
     .why-nim-header {
         padding: 60px 0 70px;
     }
-
     .why-nim-grid {
         grid-template-columns: 1fr;
         gap: 18px;
         padding: 50px 0 60px;
     }
-
-    .why-nim-cta-inner {
-        flex-direction: column;
-        text-align: center;
-        gap: 24px;
-    }
-
-    .why-nim-cta-btns {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 480px) {
-    .why-nim-header h2 {
-        font-size: 26px;
-    }
-
-    .why-nim-header p {
-        font-size: 15px;
-    }
-
-    .why-nim-card {
-        padding: 24px 20px;
-    }
-
-    .why-nim-cta-btns {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .why-nim-cta-btns .btn {
-        width: 100%;
-        justify-content: center;
-    }
+    .why-nim-header h2 { font-size: 26px; }
+    .why-nim-header p  { font-size: 15px; }
+    .why-nim-card      { padding: 24px 20px; }
 }
 
 /* Pricing */
@@ -2478,5 +2750,353 @@ span {
         width: 100%;
         justify-content: center;
         text-align: center;
+    }
+}
+
+/* ============================================================
+   BOTTOM CTA SECTION REDESIGN
+   ============================================================ */
+.cta-section {
+    position: relative;
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #800020 0%, #4a0012 100%);
+    border-radius: 24px;
+    padding: 56px 40px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(128,0,32,0.25);
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.cta-box h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-box p {
+    font-size: clamp(16px, 2vw, 18px);
+    opacity: 0.9;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-buttons .btn {
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-buttons .btn-primary {
+    background: #FFD700;
+    color: #000;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.cta-buttons .btn-primary:hover {
+    background: #ffcc00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+}
+
+.cta-buttons .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .cta-box {
+        padding: 40px 24px;
+        border-radius: 16px;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   FOOTER STYLES & FIXES
+   ============================================================ */
+.footer {
+    background-color: #000000;
+    padding: 60px 0 20px;
+    border-top: 1px solid #222222;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand p {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Footer icons visibility and hover */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #ffffff;
+    color: #800020;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.social-links svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Pages names and hover color */
+.footer-links h4, .footer-newsletter h4 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bbbbbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+}
+
+/* Footer Newsletter */
+.footer-newsletter p {
+    color: #cccccc;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.newsletter-form input:focus {
+    border-color: #800020;
+}
+
+.newsletter-form button {
+    background: #800020;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-form button:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+.newsletter-form button svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+    color: #888888;
+    font-size: 13px;
+}
+
+/* Logo in footer */
+.footer-brand .logo-image {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* ============================================================
+   ABOUT PAGE HERO SECTION
+   ============================================================ */
+.about-hero {
+    position: relative;
+    padding: 140px 0 120px;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    z-index: 1;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imges/about-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.about-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(128, 0, 32, 0.9) 0%, rgba(74, 0, 18, 0.8) 100%);
+    z-index: 0;
+}
+
+.about-hero:hover::before {
+    transform: scale(1.08);
+}
+
+.about-hero .page-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUpHero 0.8s ease-out forwards;
+}
+
+.about-hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.about-hero h1 span {
+    color: #FFD700;
+    display: inline-block;
+    position: relative;
+}
+
+.about-hero p {
+    font-size: clamp(18px, 2.5vw, 24px);
+    opacity: 0.95;
+    line-height: 1.6;
+    color: #f8f9fa;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeInUpHero {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
